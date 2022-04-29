@@ -1,4 +1,4 @@
-import { createRouter, createWebHashHistory } from 'vue-router';
+import { createRouter, createWebHistory } from 'vue-router';
 
 const routes = [
   { path: '/about', component: () => import(/* webpackChunkName: "About" */ '@/components/About.vue') },
@@ -7,7 +7,7 @@ const routes = [
 
 // 路由
 export default createRouter({
-  history: createWebHashHistory(),
+  history: createWebHistory(),
   routes,
   scrollBehavior() { // 滚动到顶部
     return { top: 0 };
