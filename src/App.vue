@@ -1,10 +1,17 @@
 <template>
     <div>
+        {{countStore.count}}-{{countStore.count}}
+        <button @click="countStore.$patch({count: countStore.count+1})">+</button> -->
+        <img :src="webpackPng" alt="">
         <router-view></router-view>
     </div>
 </template>
 <script lang="ts">
+import webpackPng from '@/assets/imgs/webpack.png';
 import { defineComponent, ref, reactive } from 'vue';
+// import { useUserStore } from '@/store/user'
+import { useCountStore } from '@/store/counter'
+ 
 interface Form {
     name: string
     age: number | null
@@ -17,9 +24,13 @@ export default defineComponent({
             name: '',
             age: null
         })
+        // const userStore = useUserStore()
+        const countStore = useCountStore()
         return {
             name,
-            form
+            form,
+            webpackPng,
+            countStore
         }
     }
 })

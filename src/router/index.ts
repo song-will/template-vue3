@@ -1,8 +1,8 @@
 import { createRouter, createWebHistory } from 'vue-router';
 
 const routes = [
-  { path: '/about', component: () => import(/* webpackChunkName: "About" */ '@/components/About.vue') },
-  { path: '/', component: () => import(/* webpackChunkName: "Home" */ '@/components/Home.vue') },
+  { path: '/about', component: () => import('@/components/About.vue') },
+  { path: '/', component: () => import('@/components/Home.vue') },
 ];
 
 // 路由
