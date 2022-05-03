@@ -6,6 +6,7 @@ const webpack = require('webpack')
 module.exports = merge(common, {
     mode: 'development',
     target: 'web',
+    devtool: 'inline-source-map',
     cache: { // 缓存, 二次快速启动
         type: 'filesystem',
         buildDependencies: {
@@ -14,9 +15,7 @@ module.exports = merge(common, {
     },
     devServer: {
         port: 10250,
-        hot: true,
-        historyApiFallback: true,
-        compress: true
+        historyApiFallback: true
     },
     plugins: [
         new webpack.HotModuleReplacementPlugin()

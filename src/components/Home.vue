@@ -2,8 +2,8 @@
     <div class='home'> 
         home
         {{countStore.count}}
-        <button @click="countStore.$patch({count: countStore.count+1})">+</button>  
-        <button @click="countStore.decrementCount">-</button>
+        <el-button type="primary" @click="countStore.$patch({count: countStore.count+1})">+</el-button>  
+        <el-button @click="countStore.decrementCount">-</el-button>
         <router-link to="/about">link</router-link>
     </div>
 </template>
